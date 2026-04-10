@@ -5,9 +5,9 @@ icon: globe
 
 # Publish a docs site
 
-Once you’ve finished writing, editing, or importing your content, you can publish your work to the web as a docs site. Your docs will be published on the web and available to your selected audience.
+When you finish writing, editing, or importing your content, you can publish it to a docs site and make it available to your selected audience.
 
-The content on your site comes from [spaces](../../creating-content/content-structure/space.md) in your organization. When you create a new docs site, you can create a new space, or link an existing one.
+The content on your docs site comes from [spaces](../../creating-content/content-structure/space.md) in your organization. When you create a site, you can create a new space or link an existing one.
 
 <figure><img src="../../.gitbook/assets/25_12_10_publishing_documentation_publish_docs@2x.png" alt="A GitBook screenshot showing the docs sites homepage"><figcaption><p>GitBook's docs sites homepage.</p></figcaption></figure>
 
@@ -19,6 +19,10 @@ Give your site a name, choose a starting point for your content, and select whet
 
 If you already have content in a space that you would like to use, you can create a docs site directly from that space by opening the space and clicking **Share** in the top-right corner of the window. Then choosing **Publish as a docs site** from the share modal.
 
+{% hint style="info" %}
+**Note:** You can also manage permissions at the site level — allowing you to control who can view or edit each site independently of your organization settings. See [Roles](../../account-management/member-management/roles.md) for more details.&#x20;
+{% endhint %}
+
 ### Publish a docs site
 
 By default, your site will be published publicly. You can change your site’s visibility in your [site’s settings](../site-settings.md).
@@ -29,32 +33,4 @@ There are three primary options to choose from when publishing your site:
 
 ### Delete or unpublish a docs site
 
-To delete a docs site, you’ll need to open your site’s dashboard, then open [**Site settings**](../site-settings.md#delete-site) from the top-right corner.
-
-### Site permissions
-
-Admins can manage site permissions directly from a docs site.
-
-From the site’s **Overview** page, click **Share** in the top-right corner. You can also open **Settings** > **General** and click **Access** > **Manage permissions**.
-
-You can also manage these settings from [Site settings](../site-settings.md).
-
-Setting a permission level on a site, for everyone, a team, or an individual user, determines their ability to administer or view the site. When spaces within the site are set to _**Inherited**_ mode, these permissions are also propagated to those spaces.
-
-The table below summarizes how each role maps to permissions on the site and how it propagates to spaces in _**Inherited**_ mode.
-
-| Permission level for spaces | Permissions on the site |
-| --------------------------- | ----------------------- |
-| Administrator               | Edit and see            |
-| Creator                     | See                     |
-| Reviewer                    | See                     |
-| Editor                      | See                     |
-| Commenter                   | See                     |
-| Viewer                      | See                     |
-| No access                   | Cannot see              |
-
-{% hint style="info" %}
-Spaces in _**Inherited**_ mode inherit permissions from the organization or their parent collection, along with the site permissions and any local overrides.
-
-Each member is assigned the highest role they have across these permission sources.
-{% endhint %}
+To delete a docs site, open your site’s dashboard, then open [**Site settings**](../site-settings.md#delete-site) from the top-right corner.
