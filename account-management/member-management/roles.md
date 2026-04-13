@@ -1,3 +1,9 @@
+---
+description: >-
+  A breakdown of every role in GitBook — what each one can do, and how to use
+  them to control access across your organization
+---
+
 # Roles
 
 When adding members to your organization, you can give them a **default role**. This role will apply to any content that inherits its permissions from the organization.
@@ -90,23 +96,22 @@ If an admin is also a creator or admin in another GitBook organization, they hav
 
 </details>
 
-### The Reader role vs public docs readers
+### Roles on a docs site
 
-The Reader role is an invited, paid seat in your organization. Public docs readers don’t need an invite and don’t use paid seats.&#x20;
+When roles are applied at the [site level](permissions-and-inheritance.md), only **Administrators** can change site settings. All other roles can still contribute to and edit content in the spaces they have access to — they just can't manage the site itself. The table below shows how each role maps to its site permissions.&#x20;
 
-#### Reader role (organization member)
+| Permission level | Permissions on the site |
+| ---------------- | ----------------------- |
+| Administrator    | Edit and view           |
+| Creator          | View                    |
+| Reviewer         | View                    |
+| Editor           | View                    |
+| Commenter        | View                    |
+| Reader           | View                    |
+| No access        | Cannot view             |
 
-The Reader role is a member of your organization who:
+### **Reader role and public docs reader**
 
-* Has been invited
-* Consumes a paid seat
-* Can access published and unpublished content _they have permission for_.
+The Reader role is an invited organization member with a paid seat. A public docs reader is a site visitor who doesn't need an invitation or a paid seat.
 
-#### Public docs reader (site visitor)
-
-A public docs reader is someone who:
-
-* Is not a member of your organization
-* Doesn’t need an invite
-* Doesn’t consume a paid seat
-* Can only access what’s published on the docs site.
+<table><thead><tr><th width="198.80078125"></th><th>Reader role (your organization)</th><th>Public docs reader (site visitor)</th></tr></thead><tbody><tr><td><strong>Invitation required</strong></td><td>Yes</td><td>No</td></tr><tr><td><strong>Paid seat</strong></td><td>Yes</td><td>No</td></tr><tr><td><strong>Content access</strong></td><td>Published and unpublished (with permission)</td><td>Published only</td></tr></tbody></table>
