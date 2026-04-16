@@ -14,6 +14,15 @@ This will open a new change request, where you can edit or delete content as nee
 
 When creating a change request, you can add a title and description to provide more context about the changes you’re making.
 
+You can also link the change request to a source, including:
+
+* Linear issues
+* GitHub pull requests or issues
+* Jira tickets
+* General URLs
+
+These links appear on the change request, so reviewers can trace the work back to its origin.
+
 Once you’re happy with your changes, you can use the button in the header bar to [**Request a review**](change-requests-in-a-space.md#request-a-review-on-a-change-request) of your change request, or [**Merge**](change-requests-in-a-space.md#merging-a-change-request) it directly into the main branch.
 
 #### Creating a change request with GitBook Agent

@@ -19,6 +19,8 @@ We’re slowly rolling out access to channels. Stay tuned for more progress on t
 
 Channels allow you to bring the power of [GitBook Assistant](gitbook-ai-assistant.md) and [GitBook Agent](../gitbook-agent/what-is-gitbook-agent.md) into other tools and workflows.
 
+When GitBook Agent works from Slack, GitHub, or Linear, it automatically links the change request to the originating thread, issue, or pull request.
+
 To add a channel, open your site’s **Settings** and click on **Channels**.
 
 {% hint style="info" %}
