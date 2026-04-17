@@ -24,6 +24,18 @@ To add a connection, open your site’s **Settings** and click on **Connections*
 
 Select a source type. Then authorize it, or enter the URL you want GitBook to import.
 
+{% hint style="info" %}
+If you connect YouTube, enter the channel ID — not the channel name.
+
+A channel name won't work for this source.
+
+In YouTube Studio, open **Settings** → **Channel** → **Advanced settings**.
+
+Copy the **Channel ID**.
+
+If your channel URL contains `/channel/`, copy the part after `/channel/`.
+{% endhint %}
+
 Each connection creates a stream of records from that source, such as issues, discussions, pages, or videos.
 {% endstep %}
 
@@ -57,7 +69,7 @@ This makes the source easier to identify in the connections list, especially if 
 #### Auto-generate change requests
 
 {% hint style="warning" %}
-Auto generating change requests is currently in early access.&#x20;
+Auto generating change requests is currently in early access.
 
 See [agent-audit.md](../gitbook-agent/agent-audit.md "mention") for information on requesting access
 {% endhint %}
