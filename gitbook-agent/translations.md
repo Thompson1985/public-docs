@@ -11,7 +11,7 @@ tags:
 # Translations
 
 {% hint style="info" %}
-Only [organization admins](../account-management/member-management/roles.md#admin) can create and access translations, as it’s [a billable feature](translations.md#pricing).
+Only [organization admins](../collaboration/member-management/roles.md#admin) can create and access translations, as it’s [a billable feature](translations.md#pricing).
 {% endhint %}
 
 Auto translations make it easy to keep your documentation up-to-date in multiple languages, with minimal manual effort. You can create a space as a translation of another, and let GitBook Agent handle the rest.
@@ -54,7 +54,7 @@ Custom instructions cannot be used to create new elements on a translated space,
 
 ## Add a translation to a variant
 
-After creating a translation, you’ll be able to add it to published docs site as a [variant](../publishing-documentation/site-structure/variants.md). This will allow users to toggle between languages in the upper right corner when viewing your main docs site.
+After creating a translation, you’ll be able to add it to published docs site as a [variant](../docs-site/site-structure/variants.md). This will allow users to toggle between languages in the upper right corner when viewing your main docs site.
 
 {% hint style="info" %}
 To provide the best experience for your users, you’re able to set the default language of a variant when setting it in your settings.
@@ -118,9 +118,9 @@ You should only create **one translation workflow per language** of any given so
 
 <summary>What are some current limitations?</summary>
 
-* Translations do not localize UI elements in your variant automatically. Head to your site’s customization settings to [localize the interface](../publishing-documentation/customization/extra-configuration.md#localize-user-interface) for a [specific variant](../publishing-documentation/customization/#customizing-sites-with-multiple-sections).
+* Translations do not localize UI elements in your variant automatically. Head to your site’s customization settings to [localize the interface](../docs-site/customization/extra-configuration.md#localize-user-interface) for a [specific variant](../docs-site/customization/#customizing-sites-with-multiple-sections).
   * This includes user-input customizations, such as announcement banners.
-* Translations cannot add extra content to the page - like a hint or a banner noting that a page was translated by AI. Consider adding an extra page in the translated space to note this, or the [announcement banner](../publishing-documentation/customization/layout-and-structure.md#announcement-premium-and-ultimate) in your site variant.
+* Translations cannot add extra content to the page - like a hint or a banner noting that a page was translated by AI. Consider adding an extra page in the translated space to note this, or the [announcement banner](../docs-site/customization/layout-and-structure.md#announcement-premium-and-ultimate) in your site variant.
 * Changing the glossary triggers a full re-translation of all pages, which can increase processing time and cost. There is no partial re-translation based on glossary usage at this time.
 
 </details>

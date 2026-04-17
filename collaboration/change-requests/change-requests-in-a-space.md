@@ -4,7 +4,7 @@ description: "Learn about collaborating on a single change request in a space �
 
 # Change requests in a space
 
-When you’re within a [space](../../getting-started/concepts.md#space), you can make changes by opening a new change request, or browse existing change requests to see what other people are working on.
+When you’re within a [space](../../resources/concepts.md#space), you can make changes by opening a new change request, or browse existing change requests to see what other people are working on.
 
 ### Creating a change request
 
@@ -52,7 +52,7 @@ Below the **Preview** button is a URL for your site preview. Click this and your
 When you open a preview URL in a new tab, you will also see [the Preview toolbar](../../resources/gitbook-ui/toolbar-on-published-sites-and-site-previews.md) at the bottom of the browser window. This toolbar lets you quickly jump back into GitBook to view, edit, or comment on the change request, or open the live version of your site.
 
 {% hint style="info" %}
-You can only preview change requests for spaces added to a [published docs site](../../publishing-documentation/publish-a-docs-site/).
+You can only preview change requests for spaces added to a [published docs site](../../docs-site/publish-a-docs-site/).
 {% endhint %}
 
 {% hint style="warning" %}
@@ -69,7 +69,7 @@ Here you can add a description to your change request to give your reviewers som
 
 When you click **Request a review**, the change request’s status will change to **In review**, and anyone you tagged in your review request will get a notification.
 
-If your changes don’t require a review, you have the appropriate [permissions](../../account-management/member-management/roles.md), and you don’t have any blocking [merge rules](../merge-rules.md), you can merge your changes into the main version directly instead.
+If your changes don’t require a review, you have the appropriate [permissions](../member-management/roles.md), and you don’t have any blocking [merge rules](../merge-rules.md), you can merge your changes into the main version directly instead.
 
 {% hint style="info" %}
 [Add GitBook Agent as a reviewer](../../gitbook-agent/review-change-requests-with-gitbook-agent.md) to your change request and it can check your content for spelling, grammar and style guide errors, suggest improvements and more.
@@ -94,7 +94,7 @@ You can switch to the **Changes** tab to check the diff view in any change reque
 
 Merging a change request will add the change request’s changes into the main branch of content, creating an updated version and a new entry in the space’s [version history](../../creating-content/version-control.md#see-the-activity-of-a-specific-draft).
 
-You might not be able to merge a change request if you don’t have the right [permissions](../../account-management/member-management/permissions-and-inheritance.md), or if your change request hasn’t passed your organization or space’s [merge rules](../merge-rules.md).
+You might not be able to merge a change request if you don’t have the right [permissions](../member-management/permissions-and-inheritance.md), or if your change request hasn’t passed your organization or space’s [merge rules](../merge-rules.md).
 
 ### Updating a change request
 

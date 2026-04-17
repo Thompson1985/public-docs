@@ -33,14 +33,14 @@ You can allow all users with a specific email domain to join your organization i
 
 Invite links in GitBook allow you to maintain a list of links that members can use to sign up and quickly join your organization.
 
-Invite links are tied to specific [roles](../account-management/member-management/roles.md), and you can create — and revoke — as many invite links as you like.
+Invite links are tied to specific [roles](member-management/roles.md), and you can create — and revoke — as many invite links as you like.
 
 Here’s how to create an invite link to your organization:
 
 1. Open your [organization settings](../account-management/organization-settings.md), then choose the **Members** section.
 2. Click **Invite new members**, then click the **Invite by links** button at the bottom of the modal.
 3. Use one of the existing links, or click **Create multiple links** to add a new link.
-4. Select the [role](../account-management/member-management/roles.md) you want for the new user, copy the link, and share it with your new member.
+4. Select the [role](member-management/roles.md) you want for the new user, copy the link, and share it with your new member.
 
 To revoke an invite link, follow the same steps as above, then find the link, open the **Actions menu** <picture><source srcset="../.gitbook/assets/25_01_10_actions_icon_dark.svg" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/25_01_10_actions_icon_light.svg" alt=""></picture> and choose **Revoke**.
 
@@ -50,14 +50,14 @@ To share a single [space](../creating-content/content-structure/space.md), click
 
 ### Invite a member or team from your organization <a href="#invite-members" id="invite-members"></a>
 
-Some people in your team may not have access to a specific space in your GitBook organization due to their [role](../account-management/member-management/roles.md) or specific [permissions settings](../account-management/member-management/permissions-and-inheritance.md).&#x20;
+Some people in your team may not have access to a specific space in your GitBook organization due to their [role](member-management/roles.md) or specific [permissions settings](member-management/permissions-and-inheritance.md).&#x20;
 
 To invite someone who’s already a member of your organization:
 
 1. Open the space or collection’s **Share** modal
 2. Type their name, choose their role for this space, and hit **Invite**.
 
-You can also add an entire [team](../account-management/member-management/teams.md) by typing the team name and hitting **Invite**.
+You can also add an entire [team](member-management/teams.md) by typing the team name and hitting **Invite**.
 
 ### Invite someone from outside your organization <a href="#invite-someone-from-outside-your-organization" id="invite-someone-from-outside-your-organization"></a>
 
@@ -66,7 +66,7 @@ To invite someone from outside your organization to a space or collection:
 1. Open the space or collection’s **Share** modal&#x20;
 2. Add the person’s email address, choose their role for this collection, and hit **Invite**.
 
-By default, people you add will be a [guest](../account-management/member-management/roles.md#the-guest-role) in the space or collection. Guests only have access to the individual spaces that you invite them to, and can be given a specific [role](../account-management/member-management/roles.md) within that space — whether it’s to edit the content, or only view and comment on it.
+By default, people you add will be a [guest](member-management/roles.md#the-guest-role) in the space or collection. Guests only have access to the individual spaces that you invite them to, and can be given a specific [role](member-management/roles.md) within that space — whether it’s to edit the content, or only view and comment on it.
 
 Alternatively, you can also choose to enable the **Invite as an organization member** toggle, which will give the new member access to all your team’s content with the permissions of the role you’ve selected.
 

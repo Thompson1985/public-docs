@@ -26,7 +26,7 @@ The sidebar allows you to see and overview of your GitBook organization at a gla
 * **Integrations**\
   GitBook [integrations](../../content-editor/editor/broken-reference/) supercharge your content, allowing you to embed more into your pages, or add information to your knowledge base from other apps.
 * **Docs sites**\
-  Toggle this section to view all the [docs sites](../../publishing-documentation/publish-a-docs-site/) in your organization right in the sidebar and jump to one with a click.
+  Toggle this section to view all the [docs sites](../../docs-site/publish-a-docs-site/) in your organization right in the sidebar and jump to one with a click.
 * **Spaces**\
   The spaces section is where you’ll find the [collections](../../creating-content/content-structure/collection.md) and [spaces](../../creating-content/content-structure/space.md) you create when adding more content. Head to our [content structure](../../creating-content/content-structure/) section to find out more.
 * **Settings**\
@@ -132,11 +132,11 @@ The site header includes:
 * **Overview**\
   The site overview shows you essential information about your site including it’s URL, publish status, audience and content, as well as top-level insights.
 * **Insights**\
-  The [insights panel](../../publishing-documentation/insights.md) gives you detailed analytics about your site and how it’s performing.
+  The [insights panel](../../docs-site/insights.md) gives you detailed analytics about your site and how it’s performing.
 * **Customization**\
-  Here you can [customize your site](../../publishing-documentation/customization/) with your own logo, colors, header links, and much more.
+  Here you can [customize your site](../../docs-site/customization/) with your own logo, colors, header links, and much more.
 * **Settings**\
-  Access your [site’s settings](../../publishing-documentation/site-settings.md) and control the name, audience, content structure and other options.
+  Access your [site’s settings](../../docs-site/site-settings.md) and control the name, audience, content structure and other options.
 * **Preview**\
   The preview tab lets you quickly see how your published site will look in light and dark mode across desktop and mobile displays.
 * **Integrations**\

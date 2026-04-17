@@ -2,11 +2,10 @@
 
 ## Get Started <a href="#getting-started" id="getting-started"></a>
 
-* [GitBook documentation](README.md)
+* [Overview](README.md)
 * [Quickstart](getting-started/quickstart.md)
-* [Concepts](getting-started/concepts.md)
-* [Migrate to GitBook](getting-started/import.md)
 * [AI-native documentation](getting-started/ai-documentation.md)
+* [Migrate to GitBook](getting-started/import.md)
 * [GitHub & GitLab Sync](getting-started/git-sync/README.md)
   * [Enabling GitHub Sync](getting-started/git-sync/enabling-github-sync.md)
   * [Enabling GitLab Sync](getting-started/git-sync/enabling-gitlab-sync.md)
@@ -17,7 +16,44 @@
   * [Troubleshooting](getting-started/git-sync/troubleshooting.md)
   * [Skill.md](https://gitbook.com/docs/skill.md)
 
-## Create <a href="#creating-content" id="creating-content"></a>
+## Your docs site <a href="#docs-site" id="docs-site"></a>
+
+* [Site settings](docs-site/site-settings.md)
+* [Site customization](docs-site/customization/README.md)
+  * [Icons, colors, and themes](docs-site/customization/icons-colors-and-themes.md)
+  * [Layout and structure](docs-site/customization/layout-and-structure.md)
+  * [Sharing and social](docs-site/customization/sharing-and-social.md)
+  * [Extra configuration](docs-site/customization/extra-configuration.md)
+* [Site structure](docs-site/site-structure/README.md)
+  * [Site sections](docs-site/site-structure/site-sections.md)
+  * [Content variants](docs-site/site-structure/variants.md)
+  * [Multilingual sections](docs-site/site-structure/multilingual-sections.md)
+* [AI Search](docs-site/ai-search.md)
+* [Set a custom domain](docs-site/custom-domain/README.md)
+  * [Setting a custom subdirectory](docs-site/custom-domain/setting-a-custom-subdirectory/README.md)
+    * [Configuring a subdirectory with Cloudflare](docs-site/custom-domain/setting-a-custom-subdirectory/configuring-a-subdirectory-with-cloudflare.md)
+    * [Configuring a subdirectory with Vercel](docs-site/custom-domain/setting-a-custom-subdirectory/configuring-a-subdirectory-with-vercel.md)
+    * [Configuring a subdirectory with AWS using CloudFront and Route 53](docs-site/custom-domain/setting-a-custom-subdirectory/configuring-a-subdirectory-with-aws.md)
+* [Publish a docs site](docs-site/publish-a-docs-site/README.md)
+  * [Public publishing](docs-site/publish-a-docs-site/public-publishing.md)
+  * [Private publishing with share links](docs-site/publish-a-docs-site/share-links.md)
+  * [Authenticated access](site-access/authenticated-access/README.md)
+* [Site redirects](docs-site/site-redirects.md)
+* [Embed in your product](docs-site/embedding/README.md)
+  * [Implementation](docs-site/embedding/implementation/README.md)
+    * [Script tag](docs-site/embedding/implementation/script.md)
+    * [Node.js/NPM](docs-site/embedding/implementation/nodejs.md)
+    * [React](docs-site/embedding/implementation/react.md)
+  * [Authentication](docs-site/embedding/using-with-authenticated-docs.md)
+  * [Configuration](docs-site/embedding/configuration/README.md)
+    * [Customizing the Embed](docs-site/embedding/configuration/customizing-docs-embed.md)
+    * [Connect to custom tools](docs-site/embedding/configuration/creating-custom-tools.md)
+    * [API Reference](docs-site/embedding/configuration/reference.md)
+* [AI insights](docs-site/ai-insights.md)
+* [Site analytics](docs-site/insights.md)
+* [PDF export](docs-site/pdf-export.md)
+
+## Create content <a href="#creating-content" id="creating-content"></a>
 
 * [Formatting your content](creating-content/formatting/README.md)
   * [Inline content](creating-content/formatting/inline.md)
@@ -64,24 +100,56 @@
 * [Version control](creating-content/version-control.md)
 * [Broken links](creating-content/broken-links.md)
 
-## GitBook Agent
-
-* [What is GitBook Agent?](gitbook-agent/what-is-gitbook-agent.md)
-* [Writing with GitBook Agent](gitbook-agent/write-and-edit-with-ai.md)
-* [Review change requests with GitBook Agent](gitbook-agent/review-change-requests-with-gitbook-agent.md)
-* [Translations](gitbook-agent/translations.md)
-
 ## Collaborate <a href="#collaboration" id="collaboration"></a>
 
 * [Inviting your team](collaboration/share.md)
+* [Member management](collaboration/member-management/README.md)
+  * [Manage or remove members](collaboration/member-management/invite-members-to-your-organization.md)
+  * [Permissions and inheritance](collaboration/member-management/permissions-and-inheritance.md)
+  * [Roles](collaboration/member-management/roles.md)
+  * [Teams](collaboration/member-management/teams.md)
 * [Change requests](collaboration/change-requests/README.md)
   * [Change requests screen](collaboration/change-requests/change-requests-screen.md)
   * [Change requests in a space](collaboration/change-requests/change-requests-in-a-space.md)
 * [Merge rules](collaboration/merge-rules.md)
 * [Comments](collaboration/comments.md)
 * [Notifications](collaboration/notifications.md)
-* [PDF export](collaboration/pdf-export.md)
 * [Live edits](collaboration/live-edits.md)
+
+## Site access
+
+* [Channels](site-access/channels.md)
+* [Authenticated access](site-access/authenticated-access/README.md)
+  * [Enabling authenticated access](site-access/authenticated-access/enabling-authenticated-access.md)
+  * [Setting up Auth0](site-access/authenticated-access/setting-up-auth0.md)
+  * [Setting up Azure AD](site-access/authenticated-access/setting-up-azure-ad.md)
+  * [Setting up AWS Cognito](site-access/authenticated-access/setting-up-aws-cognito.md)
+  * [Setting up Okta](site-access/authenticated-access/setting-up-okta.md)
+  * [Setting up OIDC](site-access/authenticated-access/setting-up-oidc.md)
+  * [Setting up a custom backend](site-access/authenticated-access/setting-up-a-custom-backend.md)
+* [Adaptive content](site-access/adaptive-content/README.md)
+  * [Enabling adaptive content](site-access/adaptive-content/enabling-adaptive-content/README.md)
+    * [Cookies](site-access/adaptive-content/enabling-adaptive-content/cookies.md)
+    * [URL](site-access/adaptive-content/enabling-adaptive-content/url.md)
+    * [Feature flags](site-access/adaptive-content/enabling-adaptive-content/feature-flags.md)
+    * [Authenticated access](site-access/adaptive-content/enabling-adaptive-content/authenticated-access.md)
+  * [Adapting your content](site-access/adaptive-content/adapting-your-content.md)
+  * [Testing with segments](site-access/adaptive-content/testing-with-segments.md)
+
+## AI & search
+
+* [GitBook Assistant](ai-and-search/gitbook-ai-assistant.md)
+* [Connections](ai-and-search/connections.md)
+* [LLM-ready docs](ai-and-search/llm-ready-docs.md)
+* [MCP servers for published docs](ai-and-search/mcp-servers-for-published-docs.md)
+
+## GitBook Agent
+
+* [What is GitBook Agent?](gitbook-agent/what-is-gitbook-agent.md)
+* [Agent audit](gitbook-agent/agent-audit.md)
+* [Writing with GitBook Agent](gitbook-agent/write-and-edit-with-ai.md)
+* [Review change requests with GitBook Agent](gitbook-agent/review-change-requests-with-gitbook-agent.md)
+* [Translations](gitbook-agent/translations.md)
 
 ## Document an API <a href="#api-references" id="api-references"></a>
 
@@ -97,64 +165,6 @@
   * [Describing enums](api-references/guides/describing-enums.md)
   * [Integrating with CI/CD](api-references/guides/support-for-ci-cd-with-api-blocks.md)
 * [Extensions reference](api-references/extensions-reference.md)
-
-## Publish Documentation <a href="#publishing-documentation" id="publishing-documentation"></a>
-
-* [Publish a docs site](publishing-documentation/publish-a-docs-site/README.md)
-  * [Public publishing](publishing-documentation/publish-a-docs-site/public-publishing.md)
-  * [Private publishing with share links](publishing-documentation/publish-a-docs-site/share-links.md)
-  * [Authenticated access](publishing-documentation/authenticated-access/README.md)
-* [Site structure](publishing-documentation/site-structure/README.md)
-  * [Site sections](publishing-documentation/site-structure/site-sections.md)
-  * [Content variants](publishing-documentation/site-structure/variants.md)
-  * [Multilingual sections](publishing-documentation/site-structure/multilingual-sections.md)
-* [Site customization](publishing-documentation/customization/README.md)
-  * [Icons, colors, and themes](publishing-documentation/customization/icons-colors-and-themes.md)
-  * [Layout and structure](publishing-documentation/customization/layout-and-structure.md)
-  * [Sharing and social](publishing-documentation/customization/sharing-and-social.md)
-  * [Extra configuration](publishing-documentation/customization/extra-configuration.md)
-* [Set a custom domain](publishing-documentation/custom-domain.md)
-* [Setting a custom subdirectory](publishing-documentation/setting-a-custom-subdirectory/README.md)
-  * [Configuring a subdirectory with Cloudflare](publishing-documentation/setting-a-custom-subdirectory/configuring-a-subdirectory-with-cloudflare.md)
-  * [Configuring a subdirectory with Vercel](publishing-documentation/setting-a-custom-subdirectory/configuring-a-subdirectory-with-vercel.md)
-  * [Configuring a subdirectory with AWS using CloudFront and Route 53](publishing-documentation/setting-a-custom-subdirectory/configuring-a-subdirectory-with-aws.md)
-* [Site settings](publishing-documentation/site-settings.md)
-* [Site analytics](publishing-documentation/insights.md)
-* [AI insights](publishing-documentation/ai-insights.md)
-* [Agent audit](publishing-documentation/agent-audit.md)
-* [Connections](publishing-documentation/connections.md)
-* [Channels](publishing-documentation/channels.md)
-* [Site redirects](publishing-documentation/site-redirects.md)
-* [Authenticated access](publishing-documentation/authenticated-access/README.md)
-  * [Enabling authenticated access](publishing-documentation/authenticated-access/enabling-authenticated-access.md)
-  * [Setting up Auth0](publishing-documentation/authenticated-access/setting-up-auth0.md)
-  * [Setting up Azure AD](publishing-documentation/authenticated-access/setting-up-azure-ad.md)
-  * [Setting up AWS Cognito](publishing-documentation/authenticated-access/setting-up-aws-cognito.md)
-  * [Setting up Okta](publishing-documentation/authenticated-access/setting-up-okta.md)
-  * [Setting up OIDC](publishing-documentation/authenticated-access/setting-up-oidc.md)
-  * [Setting up a custom backend](publishing-documentation/authenticated-access/setting-up-a-custom-backend.md)
-* [Adaptive content](publishing-documentation/adaptive-content/README.md)
-  * [Enabling adaptive content](publishing-documentation/adaptive-content/enabling-adaptive-content/README.md)
-    * [Cookies](publishing-documentation/adaptive-content/enabling-adaptive-content/cookies.md)
-    * [URL](publishing-documentation/adaptive-content/enabling-adaptive-content/url.md)
-    * [Feature flags](publishing-documentation/adaptive-content/enabling-adaptive-content/feature-flags.md)
-    * [Authenticated access](publishing-documentation/adaptive-content/enabling-adaptive-content/authenticated-access.md)
-  * [Adapting your content](publishing-documentation/adaptive-content/adapting-your-content.md)
-  * [Testing with segments](publishing-documentation/adaptive-content/testing-with-segments.md)
-* [AI Search](publishing-documentation/ai-search.md)
-* [GitBook Assistant](publishing-documentation/gitbook-ai-assistant.md)
-* [LLM-ready docs](publishing-documentation/llm-ready-docs.md)
-* [MCP servers for published docs](publishing-documentation/mcp-servers-for-published-docs.md)
-* [Embed in your product](publishing-documentation/embedding/README.md)
-  * [Implementation](publishing-documentation/embedding/implementation/README.md)
-    * [Script tag](publishing-documentation/embedding/implementation/script.md)
-    * [Node.js/NPM](publishing-documentation/embedding/implementation/nodejs.md)
-    * [React](publishing-documentation/embedding/implementation/react.md)
-  * [Authentication](publishing-documentation/embedding/using-with-authenticated-docs.md)
-  * [Configuration](publishing-documentation/embedding/configuration/README.md)
-    * [Customizing the Embed](publishing-documentation/embedding/configuration/customizing-docs-embed.md)
-    * [Connect to custom tools](publishing-documentation/embedding/configuration/creating-custom-tools.md)
-    * [API Reference](publishing-documentation/embedding/configuration/reference.md)
 
 ## Integrations
 
@@ -172,11 +182,6 @@
 * [Subscription cancellations](account-management/cancelling-a-plan.md)
 * [Personal settings](account-management/account-settings.md)
 * [Organization settings](account-management/organization-settings.md)
-* [Member management](account-management/member-management/README.md)
-  * [Manage or remove members](account-management/member-management/invite-members-to-your-organization.md)
-  * [Roles](account-management/member-management/roles.md)
-  * [Teams](account-management/member-management/teams.md)
-  * [Permissions and inheritance](account-management/member-management/permissions-and-inheritance.md)
 * [SSO & SAML](account-management/sso-and-saml/README.md)
   * [SSO Members vs non-SSO](account-management/sso-and-saml/sso-members-vs-non-sso.md)
 
@@ -191,6 +196,7 @@
   * [Toolbar on published sites and site previews](resources/gitbook-ui/toolbar-on-published-sites-and-site-previews.md "Toolbar")
 * [Keyboard shortcuts](resources/keyboard-shortcuts.md)
 * [Glossary](resources/glossary.md)
+* [Concepts](resources/concepts.md)
 
 ***
 

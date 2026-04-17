@@ -31,4 +31,4 @@ We allow users to explicitly configure this through an option in the Git Sync se
 Common causes:
 
 * **Your site isn’t published.** PR preview URLs are served from your published docs site (on `.gitbook.io` or your custom domain).
-* **Your site is behind authenticated access.** Git Sync PR previews aren’t available for sites published behind [authenticated access](../../publishing-documentation/authenticated-access/).
+* **Your site is behind authenticated access.** Git Sync PR previews aren’t available for sites published behind [authenticated access](../../site-access/authenticated-access/).

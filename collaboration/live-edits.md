@@ -27,5 +27,5 @@ You cannot unlock live editing if:
 2. a space has [GitHub or GitLab Sync](../getting-started/git-sync/) enabled.
 
 {% hint style="info" %}
-Only [administrators and creators](../account-management/member-management/roles.md) can lock or unlock live edits.
+Only [administrators and creators](member-management/roles.md) can lock or unlock live edits.
 {% endhint %}

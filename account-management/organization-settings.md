@@ -26,7 +26,7 @@ You can update the logo and the name of the organization.
 
 **GitBook AI features**
 
-[GitBook’s AI](../creating-content/searching-your-content/gitbook-ai.md)-powered search lets your team members ask questions about your content in natural language. You can also enable GitBook AI for published content in the space [customization ](../publishing-documentation/customization/)panel.
+[GitBook’s AI](../creating-content/searching-your-content/gitbook-ai.md)-powered search lets your team members ask questions about your content in natural language. You can also enable GitBook AI for published content in the space [customization ](../docs-site/customization/)panel.
 
 **Publishing**
 
@@ -37,7 +37,7 @@ Each published GitBook space that lives within your organization’s library wil
 
 You can update the GitBook subdomain here, as well as the default content, which is the space that visitors will see if they navigate to your GitBook subdomain directly.
 
-Note: GitBook subdomains are a legacy feature, and you may not have access to change your subdomain at the time of reading this doc. Please refer to [custom domain setup](../publishing-documentation/custom-domain.md) and [site sections](../publishing-documentation/site-structure/site-sections.md) to learn more about structuring your docs with custom URLs.
+Note: GitBook subdomains are a legacy feature, and you may not have access to change your subdomain at the time of reading this doc. Please refer to [custom domain setup](../docs-site/custom-domain/) and [site sections](../docs-site/site-structure/site-sections.md) to learn more about structuring your docs with custom URLs.
 
 **Actions**
 
@@ -51,11 +51,11 @@ From this section you can delete the organization. **Note: there is no turning b
 
 **Members tab**
 
-[Members](member-management/) can be added to and removed from the organization as needed. You can also update the [role](member-management/roles.md) for each member.
+[Members](../collaboration/member-management/) can be added to and removed from the organization as needed. You can also update the [role](../collaboration/member-management/roles.md) for each member.
 
 **Teams tab**
 
-[Teams](member-management/teams.md) are a way to group members within an organization. You can then grant access to certain things to anyone who is a member of a given team.
+[Teams](../collaboration/member-management/teams.md) are a way to group members within an organization. You can then grant access to certain things to anyone who is a member of a given team.
 
 </details>
 
@@ -65,7 +65,7 @@ From this section you can delete the organization. **Note: there is no turning b
 
 **Email domains**
 
-For any domains that you specify, anyone with an email address on those domains will immediately be able to access the organization upon signing up for a GitBook account. You can decide what [role](member-management/roles.md) these members should have by default.
+For any domains that you specify, anyone with an email address on those domains will immediately be able to access the organization upon signing up for a GitBook account. You can decide what [role](../collaboration/member-management/roles.md) these members should have by default.
 
 **SAML**
 

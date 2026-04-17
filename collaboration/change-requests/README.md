@@ -35,7 +35,7 @@ After a change request is opened, you’re free to make any edits or changes. Ch
 
 Once your changes are ready to go, you can request a review from your team in the **Overview** tab. Tagging reviewers in a change request will notify them, and allow you to further collaborate in the change request by directly making more changes in the editor, or discussing changes in [comments](../comments.md).
 
-You can request Docs Agent for any reviews, or anyone on your team with the right [permissions](../../account-management/member-management/permissions-and-inheritance.md).
+You can request Docs Agent for any reviews, or anyone on your team with the right [permissions](../member-management/permissions-and-inheritance.md).
 {% endstep %}
 
 {% step %}

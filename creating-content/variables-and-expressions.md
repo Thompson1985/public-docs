@@ -5,7 +5,7 @@ icon: icons
 
 # Variables and expressions
 
-With variables you can create reusable text that can be conditionally referenced in [expressions](formatting/inline.md#expressions) and [conditions for adaptive content](../publishing-documentation/adaptive-content/adapting-your-content.md#working-with-the-condition-editor).
+With variables you can create reusable text that can be conditionally referenced in [expressions](formatting/inline.md#expressions) and [conditions for adaptive content](../site-access/adaptive-content/adapting-your-content.md#working-with-the-condition-editor).
 
 If you repeat the same name, phrase or version number multiple times within your content, you can create a **variable** to help keep all those instances in sync and accurate — which is useful if you ever need to update them, or they’re complex and often mistyped.
 

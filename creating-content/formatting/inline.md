@@ -156,7 +156,7 @@ You can configure the following actions:
 
 #### **Add a link button**
 
-Send readers to another page or an external URL:<a href="../../publishing-documentation/gitbook-ai-assistant.md" class="button primary" data-icon="gitbook-assistant">Learn more about Assistant</a>
+Send readers to another page or an external URL:<a href="../../ai-and-search/gitbook-ai-assistant.md" class="button primary" data-icon="gitbook-assistant">Learn more about Assistant</a>
 
 #### **Add a search bar**
 
@@ -164,7 +164,7 @@ Open search with an optional preset query: <button type="button" class="button p
 
 #### **Add a Ask AI/GitBook Assistant bar**
 
-Open [GitBook Assistant](../../publishing-documentation/gitbook-ai-assistant.md) with an optional preset prompt: <button type="button" class="button primary" data-action="ask" data-icon="gitbook-assistant">Ask a question...</button>
+Open [GitBook Assistant](../../ai-and-search/gitbook-ai-assistant.md) with an optional preset prompt: <button type="button" class="button primary" data-action="ask" data-icon="gitbook-assistant">Ask a question...</button>
 
 #### **Add a disabled button**
 
@@ -191,7 +191,7 @@ Link and inactive buttons have both primary and secondary styles. Here are a cou
 
 ## Icons
 
-Icons allow you to add extra visual indications to your site. You can add them inline to paragraphs, inside a card, or anywhere else you need to add some flair. They will use the visual style defined in your [customization settings](../../publishing-documentation/customization/icons-colors-and-themes.md).
+Icons allow you to add extra visual indications to your site. You can add them inline to paragraphs, inside a card, or anywhere else you need to add some flair. They will use the visual style defined in your [customization settings](../../docs-site/customization/icons-colors-and-themes.md).
 
 <i class="fa-facebook">:facebook:</i> <i class="fa-github">:github:</i> <i class="fa-x-twitter">:x-twitter:</i> <i class="fa-instagram">:instagram:</i>
 

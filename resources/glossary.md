@@ -12,7 +12,7 @@ icon: book-open
 
 **Ask or search:** The search tool for content in GitBook. You can click at the top of the sidebar to open it, or press **⌘ + K**. You can type a keyword for a standard search, or ask a question using GitBook AI, which will summarize a result based on your content.
 
-**audience settings:** The settings that decide who can access a published docs site. See [publish-a-docs-site](../publishing-documentation/publish-a-docs-site/ "mention") for more information about the options in the **Audience settings menu**.
+**audience settings:** The settings that decide who can access a published docs site. See [publish-a-docs-site](../docs-site/publish-a-docs-site/ "mention") for more information about the options in the **Audience settings menu**.
 
 ### B
 
@@ -30,7 +30,7 @@ icon: book-open
 
 **cover:** An image that sits at the top of a page. You can add a cover to any page, and set it to span the full width of your page, or just the width of your content as a hero image. See [#page-covers](../creating-content/content-structure/page/#page-covers "mention") to find out more.
 
-**custom domain:** A customized URL that you can set up for a docs site, e.g. docs.yourcompany.com. You can configure it in the **Settings** panel for your docs site. See [custom-domain.md](../publishing-documentation/custom-domain.md "mention") to find out more.
+**custom domain:** A customized URL that you can set up for a docs site, e.g. docs.yourcompany.com. You can configure it in the **Settings** panel for your docs site. See [custom-domain](../docs-site/custom-domain/ "mention") to find out more.
 
 ### D
 
@@ -40,7 +40,7 @@ icon: book-open
 
 **docs site:** A published site containing the information written in the GitBook editor. Docs sites are accessible to users without a GitBook account.
 
-**domain:** The base of a docs site’s URL. You can customize this from the **Domains** section in your site’s **Settings** page. [Setting a custom domain](../publishing-documentation/custom-domain.md) will override this setting.
+**domain:** The base of a docs site’s URL. You can customize this from the **Domains** section in your site’s **Settings** page. [Setting a custom domain](../docs-site/custom-domain/) will override this setting.
 
 ### E
 
@@ -96,7 +96,7 @@ icon: book-open
 
 **sidebar:** The area on the far left of your GitBook window. It contains the **Ask or search** bar, all your docs sites, spaces and collections, as well as things like notifications, integrations and settings.
 
-**site section:** If you want your docs site to act more like a content hub, you can publish multiple spaces to the same docs site as [site sections](../publishing-documentation/site-structure/site-sections.md). These site sections will appear in a tab bar at the top of your published docs, allowing users to switch between content. You can set up site sections in the **Structure** section of **Site settings**.
+**site section:** If you want your docs site to act more like a content hub, you can publish multiple spaces to the same docs site as [site sections](../docs-site/site-structure/site-sections.md). These site sections will appear in a tab bar at the top of your published docs, allowing users to switch between content. You can set up site sections in the **Structure** section of **Site settings**.
 
 **slug:** The customizable final part of a URL, usually after the domain and a /. In a docs site, this is inferred from the title of the site, and comes after the domain. You can customize this further if needed from the **Domains** section of **Site settings**.
 
@@ -114,7 +114,7 @@ icon: book-open
 
 ### V
 
-**variant**: A [variant](../publishing-documentation/site-structure/variants.md) is a different version of your documentation — for example, a translated version of your docs, or docs for a different version number of your product. Site readers can move between different variants using a drop-down menu on the published site.
+**variant**: A [variant](../docs-site/site-structure/variants.md) is a different version of your documentation — for example, a translated version of your docs, or docs for a different version number of your product. Site readers can move between different variants using a drop-down menu on the published site.
 
 **version:** A saved snapshot of your space at a specific time. You can access previous versions of your space in the **Version history** menu.
 

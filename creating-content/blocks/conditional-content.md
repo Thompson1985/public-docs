@@ -8,9 +8,9 @@ To add a conditional block, begin a new line in the editor, type <kbd>/</kbd>, t
 
 After inserting the block, click the red condition badge in the top right of the block.
 
-Clicking this will allow you to add a condition through the [condition editor](../../publishing-documentation/adaptive-content/adapting-your-content.md#working-with-the-condition-editor). You’ll be able to write your condition as an [expression](https://gitbook.com/docs/creating-content/variables-and-expressions) that will run against data defined in your site. You can reference data from [variables](../variables-and-expressions.md), or data coming from visitors through their [claims](../../publishing-documentation/adaptive-content/enabling-adaptive-content/#set-your-visitor-schema).
+Clicking this will allow you to add a condition through the [condition editor](../../site-access/adaptive-content/adapting-your-content.md#working-with-the-condition-editor). You’ll be able to write your condition as an [expression](https://gitbook.com/docs/creating-content/variables-and-expressions) that will run against data defined in your site. You can reference data from [variables](../variables-and-expressions.md), or data coming from visitors through their [claims](../../site-access/adaptive-content/enabling-adaptive-content/#set-your-visitor-schema).
 
-See [adaptive content](../../publishing-documentation/adaptive-content/) for more details.
+See [adaptive content](../../site-access/adaptive-content/) for more details.
 
 ### Example
 

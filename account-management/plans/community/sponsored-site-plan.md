@@ -28,7 +28,7 @@ Begin by creating a new site from the site wizard and setting up your site with 
 {% step %}
 **Submit your site for ad review**
 
-Your site must be [published **publicly**](../../../publishing-documentation/publish-a-docs-site/public-publishing.md) for **seven days** before you can submit it for review.
+Your site must be [published **publicly**](../../../docs-site/publish-a-docs-site/public-publishing.md) for **seven days** before you can submit it for review.
 
 Head to your site’s settings, and scroll down to the **Ads and sponsorship** section. From here, review the ads checklist to make sure your site meets all the requirements before submitting.
 {% endstep %}
