@@ -38,7 +38,7 @@
   * [Public publishing](docs-site/publish-a-docs-site/public-publishing.md)
   * [Private publishing with share links](docs-site/publish-a-docs-site/share-links.md)
   * [Authenticated access](site-access/authenticated-access/README.md)
-* [Site redirects](docs-site/site-redirects.md)
+* [Site redirects](publishing-documentation/site-redirects.md)
 * [Embed in your product](docs-site/embedding/README.md)
   * [Implementation](docs-site/embedding/implementation/README.md)
     * [Script tag](docs-site/embedding/implementation/script.md)

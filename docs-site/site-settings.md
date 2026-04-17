@@ -109,8 +109,8 @@ Publish your content on a subdirectory (e.g. `yourcompany.com/docs`). See [#gitb
 
 ### Redirects
 
-{% content-ref url="site-redirects.md" %}
-[site-redirects.md](site-redirects.md)
+{% content-ref url="../publishing-documentation/site-redirects.md" %}
+[site-redirects.md](../publishing-documentation/site-redirects.md)
 {% endcontent-ref %}
 
 ### Features

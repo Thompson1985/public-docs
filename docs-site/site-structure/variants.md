@@ -35,7 +35,7 @@ You can change the name and slug of each of your variants by clicking the <pictu
 If your site supports multiple languages, you can also translate variant titles so the picker shows localized labels. See [Multilingual sections](multilingual-sections.md).
 
 {% hint style="info" %}
-Changing a linked space's slug will change the space's canonical URL. GitBook will create an automatic redirect from the old URL to the new one. You can also [manually create redirects](../site-redirects.md).
+Changing a linked space's slug will change the space's canonical URL. GitBook will create an automatic redirect from the old URL to the new one. You can also [manually create redirects](../../publishing-documentation/site-redirects.md).
 {% endhint %}
 
 To replace a variant’s linked space with a different space, first delete it by clicking its **Edit** <picture><source srcset="../../.gitbook/assets/25_01_10_edit_icon_dark.svg" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/25_01_10_edit_icon_light.svg" alt="The Edit icon in GitBook"></picture> button, then click the **Delete** button in the lower left of the modal. Once the variant is deleted, click the **Add variant** button to add the new space.

@@ -66,7 +66,7 @@ This view shows requests to `llms.txt`, `llms-full.txt`, and Markdown pages. You
 
 Broken URLs shows any incoming links from external sources that are resulting in a ‘Page not found’ error. These may be mistyped URLs, outdated links with no redirects, or spam links.
 
-If a broken link points to a topic that exists somewhere else in your documentation, or you simply want to direct the traffic to your primary docs, you can set up [site redirects](site-redirects.md) to point those visitors in the right direction.
+If a broken link points to a topic that exists somewhere else in your documentation, or you simply want to direct the traffic to your primary docs, you can set up [site redirects](../publishing-documentation/site-redirects.md) to point those visitors in the right direction.
 
 #### Search
 
