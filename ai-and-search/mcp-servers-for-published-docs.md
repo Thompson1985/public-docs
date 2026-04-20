@@ -1,69 +1,100 @@
 ---
 description: >-
-  Docs published on GitBook automatically generate an MCP server you can hook up
-  to external tools
+  Each published GitBook site includes an MCP server you can connect to external
+  tools
 icon: mcp
 ---
 
 # MCP servers for published docs
 
-Every published GitBook site automatically includes a Model Context Protocol (MCP) server.&#x20;
+Every published GitBook site includes a Model Context Protocol (MCP) server.
 
-This allows AI assistants to access your documentation content directly, making it easy for tools like Claude Desktop, Cursor, and VS Code extensions to answer questions using your docs.
+AI tools can use it to read your published docs directly. This works with tools like Claude Desktop, Cursor, and VS Code extensions.
 
-The MCP server is available at your site’s URL with `/~gitbook/mcp` appended. For example, GitBook’s docs are located at `https://gitbook.com/docs`, so the MCP server is at `https://gitbook.com/docs/~gitbook/mcp`.
+Your MCP server lives at your published site URL plus `/~gitbook/mcp`.
+
+For example, GitBook’s docs live at `https://gitbook.com/docs`. Its MCP server is `https://gitbook.com/docs/~gitbook/mcp`.
 
 {% hint style="info" %}
-Visiting this URL in your browser will result in an error. Instead, you can share this with tools that can make HTTP requests, like LLMs or IDEs.
+If you open this URL in a browser, you’ll see an error. Use it in a tool that can make HTTP requests, such as an AI assistant or IDE.
 {% endhint %}
 
-### Connecting an AI assistant
+### Connect an AI tool
 
 {% stepper %}
 {% step %}
 #### Find your MCP server URL
 
-Take your published GitBook site URL and add `/~gitbook/mcp` to the end.
+Take your published GitBook site URL. Then add `/~gitbook/mcp`.
 {% endstep %}
 
 {% step %}
 #### Configure your AI tool
 
-Add the MCP server URL to your AI assistant’s settings. Each tool has a slightly different setup process, so you should check out the docs for your tool of choice to see how to configure an MCP server for it.
+Open your tool’s MCP settings. Then enter the server URL.
+
+Each tool handles setup differently. Check your tool’s docs for exact steps.
 {% endstep %}
 
 {% step %}
 #### Start using your docs
 
-Once connected, your AI assistant can search through your documentation, retrieve specific pages, and answer questions using your content. The assistant will have real-time access to your published documentation.
+Once connected, the tool can search your docs, open pages, and answer questions with your content.
 {% endstep %}
 {% endstepper %}
 
 ### Requirements
 
-Your GitBook site must be published for the MCP server to work. The server only provides access to published content, never drafts or unpublished changes.
+To use an MCP server:
 
-Your AI tool needs to support the Model Context Protocol and be able to make HTTP requests to your site. Most modern AI assistants that support MCP will work with GitBook’s servers.
+* Your site must be published. The MCP server exposes published content only.
+* Your tool must support MCP over HTTP.
+* If your site uses authentication, the MCP server must use the same access rules.
+* GitBook supports HTTP transport only. `stdio` and `SSE` aren’t supported.
 
-The MCP server respects your site’s visibility settings. If your site is public, the MCP server is publicly accessible. If your site requires authentication, the MCP server will too.
+### Add the MCP link to your site
 
-The MCP server uses HTTP transport only. Tools that require stdio or SSE transport are not supported.
+In [Site customization](../docs-site/customization/), open the [Page actions](../docs-site/customization/extra-configuration.md#page-actions) section. Then turn on **Connect with MCP server**.
 
-### Enable or disable easy MCP linking
-
-In the **Page actions** section of your [Customization](../docs-site/customization/) settings, you can enable the **Connect with MCP server** option. This enables visitors to your docs site to quickly copy a link to your site's MCP server right from [the Page actions menu](../docs-site/customization/extra-configuration.md#page-actions).
+Visitors can then copy the server URL from the page actions menu.
 
 ### Privacy and access
 
-The MCP server only provides read-only access to your published documentation. It doesn’t expose any user data, analytics, or internal GitBook information.
+The MCP server gives read-only access to your published docs.
 
-Only the latest published version of your content is available through the MCP server. Draft content and unpublished changes remain private until you publish them.
+It never exposes account data, analytics, or internal GitBook data.
 
-### Common issues
+It serves the latest published version only. Drafts and unpublished changes stay private.
 
-If your AI assistant can’t connect to your MCP server, first check that your GitBook site is published and accessible. The URL should respond when you visit it in a browser.
+### Troubleshooting
 
-Make sure you’re using the correct URL format with `/~gitbook/mcp` at the end. The URL should match exactly what you see when you visit your published site.
+If a tool can’t connect:
 
-Some AI tools require specific transport methods or have particular MCP configuration requirements. Check your AI tool’s documentation for MCP setup instructions.
+* Confirm your published site is reachable.
+* Confirm the URL ends with `/~gitbook/mcp`.
+* If the site uses authentication, use a client that supports MCP authorization.
+* If the tool needs `stdio` or `SSE`, it won’t work with GitBook.
 
+### Use MCP with authenticated sites
+
+If your GitBook site uses  [authenticated access](../site-access/authenticated-access/), the MCP server at `/~gitbook/mcp` uses the same authentication. MCP clients that support the [MCP authorization spec](https://modelcontextprotocol.io/docs/tutorials/security/authorization) — including Claude and Claude Code — can connect to the server automatically using OAuth and Dynamic Client Registration (DCR).
+
+**How it works**
+
+When a supported MCP client connects to your authenticated site's MCP server, it:
+
+1. Discovers the OAuth server via the MCP handshake
+2. Dynamically registers an OAuth client (no manual client ID setup required)
+3. Redirects you to your site's upstream auth provider to sign in
+4. Exchanges the auth code for an access token and stores it locally for all subsequent requests
+
+GitBook prompts you to authenticate the first time you connect. After that, the client reuses the token until it expires.
+
+**Requirements**
+
+For this flow to work, your site must use one of GitBook's supported authentication backends:
+
+* Auth0, Azure AD, Okta, AWS Cognito, or OIDC via the native integrations
+* A custom backend with a Fallback URL configured
+
+GitBook doesn't support share-link-only sites or sites using visitor auth tokens passed as static headers for MCP authentication.
