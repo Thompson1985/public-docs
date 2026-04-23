@@ -113,6 +113,14 @@ You can configure this fallback URL within your site’s audience settings under
 
 <figure><img src="../../.gitbook/assets/25_04_10_setting_up_a_custom_backend.png" alt="A GitBook screenshot showing where to configure a fallback URL"><figcaption><p>Configure a fallback URL</p></figcaption></figure>
 
+#### Use GitBook’s login endpoint
+
+If you want a sign-in link on your published site, link to `<publishedSiteURL>/~gitbook/auth/login`.
+
+This endpoint redirects the visitor to the authentication backend configured for the site. It also adds a `location` query parameter that matches the page they started from.
+
+This is useful for header links and other entry points where you want to send visitors back to the same page after sign-in.
+
 When redirecting to the fallback URL, GitBook includes a `location` query parameter to the fallback URL that you can leverage in your handler to redirect the user to the original location of the user:
 
 ```javascript
@@ -131,6 +139,12 @@ res.redirect(redirectURL);
 {% hint style="warning" %}
 Because GitBook relies on the `location` search param - you cannot use it in your fallback URL. For example, `https://auth.gitbook.com/?location=something` is not a valid fallback URL.
 {% endhint %}
+
+#### Use GitBook’s logout endpoint
+
+If you want a sign-out link on your published site, link to `<publishedSiteURL>/~gitbook/auth/logout`.
+
+This endpoint signs the visitor out of their GitBook session.
 
 ### 4. Set up multi-tenant authenticated access (optional)
 
