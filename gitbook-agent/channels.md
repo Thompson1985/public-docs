@@ -2,7 +2,6 @@
 description: >-
   Integrate GitBook Assistant and GitBook Agent into other tools used in your
   workflow
-hidden: true
 icon: message
 tags:
   - early-access
@@ -17,7 +16,7 @@ tags:
 We’re slowly rolling out access to channels. Stay tuned for more progress on the features below.
 {% endhint %}
 
-Channels allow you to bring the power of [GitBook Assistant](../ai-and-search/gitbook-ai-assistant.md) and [GitBook Agent](../gitbook-agent/what-is-gitbook-agent.md) into other tools and workflows.
+Channels allow you to bring the power of [GitBook Assistant](../ai-and-search/gitbook-ai-assistant.md) and [GitBook Agent](what-is-gitbook-agent.md) into other tools and workflows.
 
 When GitBook Agent works from Slack, GitHub, or Linear, it automatically links the change request to the originating thread, issue, or pull request.
 

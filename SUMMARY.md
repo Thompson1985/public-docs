@@ -118,7 +118,6 @@
 
 ## Site access
 
-* [Channels](site-access/channels.md)
 * [Authenticated access](site-access/authenticated-access/README.md)
   * [Enabling authenticated access](site-access/authenticated-access/enabling-authenticated-access.md)
   * [Setting up Auth0](site-access/authenticated-access/setting-up-auth0.md)
@@ -146,6 +145,7 @@
 ## GitBook Agent
 
 * [What is GitBook Agent?](gitbook-agent/what-is-gitbook-agent.md)
+* [Channels](gitbook-agent/channels.md)
 * [Agent audit](gitbook-agent/agent-audit.md)
 * [Writing with GitBook Agent](gitbook-agent/write-and-edit-with-ai.md)
 * [Review change requests with GitBook Agent](gitbook-agent/review-change-requests-with-gitbook-agent.md)
