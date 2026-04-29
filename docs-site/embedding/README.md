@@ -5,16 +5,19 @@ icon: picture-in-picture
 
 # Embed in your product
 
-The Docs Embed is a powerful window into your product knowledge that you can add to any product or website. Users can ask their questions to the [GitBook Assistant](../../ai-and-search/gitbook-ai-assistant.md) or browse your docs directly, without leaving your product. You can open the Embed with a button, put it in any component you want, or control it completely programatically.
+The Docs Embed is a powerful window into your product knowledge that you can add to any product or website. Users can ask questions to the [GitBook Assistant](../../ai-and-search/gitbook-ai-assistant.md), search your docs, or browse pages directly, without leaving your product. You can open the embed with a button, put it in any component you want, or control it completely programmatically.
 
 <div data-with-frame="true"><figure><img src="../../.gitbook/assets/25_10_21_emebeddable_assistant.png" alt="Embed GitBook Assistant into your product or website"><figcaption><p>Embed your docs into your product or website</p></figcaption></figure></div>
 
 ## Overview
 
-The Docs Embed consists of multiple tabs that get shown automatically, depending on your site's configuration:
+The Docs Embed can contain three tabs:
 
 * **Assistant**: The [GitBook Assistant](../../ai-and-search/gitbook-ai-assistant.md) - an AI-powered chat interface to help users find answers
+* **Search**: A search-focused surface for quickly finding pages and asking scoped questions
 * **Docs**: A browser for navigating your documentation site
+
+All tabs are enabled by default. If you set `tabs`, the embed shows only the tabs you list.
 
 You can customize and override the default configuration with custom actions, tools, suggested questions, [Authenticated Access](../../site-access/authenticated-access/), and more.
 

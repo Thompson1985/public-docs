@@ -10,20 +10,21 @@ Docs Embed provides different APIs depending on how you integrate it. This refer
 
 ## Method Comparison
 
-| Method                    | Standalone Script                                            | NPM Package                      | React Components                    |
-| ------------------------- | ------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
-| **Initialize**            | `GitBook('init', options, frameOptions)`                     | `createGitBook(options)`         | `<GitBookProvider siteURL="...">`   |
-| **Get frame URL**         | ❌ (handled internally)                                       | `client.getFrameURL(options)`    | `useGitBook().getFrameURL(options)` |
-| **Create frame client**   | ❌ (handled internally)                                       | `client.createFrame(iframe)`     | `useGitBook().createFrame(iframe)`  |
-| **Show/Hide widget**      | `GitBook('show')` / `GitBook('hide')`                        | ❌                                | ❌                                   |
-| **Open/Close window**     | `GitBook('open')` / `GitBook('close')` / `GitBook('toggle')` | ❌                                | ❌                                   |
-| **Navigate to page**      | `GitBook('navigateToPage', path)`                            | `frame.navigateToPage(path)`     | Via frame client                    |
-| **Navigate to assistant** | `GitBook('navigateToAssistant')`                             | `frame.navigateToAssistant()`    | Via frame client                    |
-| **Post message**          | `GitBook('postUserMessage', message)`                        | `frame.postUserMessage(message)` | Via frame client                    |
-| **Clear chat**            | `GitBook('clearChat')`                                       | `frame.clearChat()`              | Via frame client                    |
-| **Configure**             | `GitBook('configure', settings)`                             | `frame.configure(settings)`      | Props on `<GitBookFrame>`           |
-| **Event listeners**       | ❌                                                            | `frame.on(event, listener)`      | Via frame client                    |
-| **Unload**                | `GitBook('unload')`                                          | ❌                                | ❌                                   |
+| Method                    | Standalone Script                                            | NPM Package                           | React Components                     |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------- | ------------------------------------ |
+| **Initialize**            | `GitBook('init', options, frameOptions)`                     | `createGitBook(options)`              | `<GitBookProvider siteURL="...">`    |
+| **Color scheme override** | `GitBook('init', options, { colorScheme })`                  | `client.getFrameURL({ colorScheme })` | `<GitBookFrame colorScheme="..." />` |
+| **Get frame URL**         | ❌ (handled internally)                                       | `client.getFrameURL(options)`         | `useGitBook().getFrameURL(options)`  |
+| **Create frame client**   | ❌ (handled internally)                                       | `client.createFrame(iframe)`          | `useGitBook().createFrame(iframe)`   |
+| **Show/Hide widget**      | `GitBook('show')` / `GitBook('hide')`                        | ❌                                     | ❌                                    |
+| **Open/Close window**     | `GitBook('open')` / `GitBook('close')` / `GitBook('toggle')` | ❌                                     | ❌                                    |
+| **Navigate to page**      | `GitBook('navigateToPage', path)`                            | `frame.navigateToPage(path)`          | Via frame client                     |
+| **Navigate to assistant** | `GitBook('navigateToAssistant')`                             | `frame.navigateToAssistant()`         | Via frame client                     |
+| **Post message**          | `GitBook('postUserMessage', message)`                        | `frame.postUserMessage(message)`      | Via frame client                     |
+| **Clear chat**            | `GitBook('clearChat')`                                       | `frame.clearChat()`                   | Via frame client                     |
+| **Configure**             | `GitBook('configure', settings)`                             | `frame.configure(settings)`           | Props on `<GitBookFrame>`            |
+| **Event listeners**       | ❌                                                            | `frame.on(event, listener)`           | Via frame client                     |
+| **Unload**                | `GitBook('unload')`                                          | ❌                                     | ❌                                    |
 
 ## Standalone Script API
 
@@ -36,16 +37,18 @@ Initialize the widget with site URL and optional authenticated access.
 **Parameters:**
 
 * `options`: `{ siteURL: string }` - Your GitBook docs site URL
-* `frameOptions`: `{ visitor?: { token?: string, unsignedClaims?: Record<string, unknown> } }` (optional) - Authenticated access options
+* `frameOptions`: `{ visitor?: { token?: string, unsignedClaims?: Record<string, unknown> }, colorScheme?: 'light' | 'dark' }` (optional) - Frame options
 
 **Example:**
 
 ```javascript
 window.GitBook('init', 
   { siteURL: 'https://docs.company.com' },
-  { visitor: { token: 'your-jwt-token' } }
+  { visitor: { token: 'your-jwt-token' }, colorScheme: 'dark' }
 );
 ```
+
+When omitted, `colorScheme` follows the iframe's CSS `color-scheme`.
 
 ### Widget Control
 
@@ -211,7 +214,7 @@ Configure the embed with customization options. See the [Configuration section](
 ```javascript
 window.GitBook('configure', {
   trademark: false,
-  tabs: ['assistant', 'docs'],
+  tabs: ['assistant', 'search', 'docs'],
   actions: [
     {
       icon: 'circle-question',
@@ -254,7 +257,7 @@ Get the iframe URL with optional authenticated access.
 
 **Parameters:**
 
-* `options`: `{ visitor?: { token?: string, unsignedClaims?: Record<string, unknown> } }` (optional)
+* `options`: `{ visitor?: { token?: string, unsignedClaims?: Record<string, unknown> }, colorScheme?: 'light' | 'dark' }` (optional)
 
 **Returns:** `string`
 
@@ -262,6 +265,7 @@ Get the iframe URL with optional authenticated access.
 
 ```javascript
 const iframeURL = gitbook.getFrameURL({
+  colorScheme: 'dark',
   visitor: {
     token: 'your-jwt-token',
     unsignedClaims: { userId: '123', plan: 'premium' }
@@ -342,3 +346,7 @@ unsubscribe();
 ## React Components API
 
 See the [React integration guide](../implementation/react.md) for component props and the `useGitBook` hook API.
+
+`GitBookFrame` supports `colorScheme="light" | "dark"` and the `visitor` prop for authenticated access.
+
+`useGitBook().getFrameURL()` accepts the same `colorScheme` parameter as the NPM package.

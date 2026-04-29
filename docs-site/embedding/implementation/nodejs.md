@@ -111,7 +111,7 @@ Configure the embed with customization options:
 ```javascript
 frame.configure({
   trademark: false,
-  tabs: ['assistant', 'docs'],
+  tabs: ['assistant', 'search', 'docs'],
   actions: [
     {
       icon: 'circle-question',
@@ -149,7 +149,7 @@ const unsubscribe = frame.on('navigate', (data) => {
 ### Client Factory
 
 * `createGitBook(options: { siteURL: string })` → `GitBookClient`
-* `client.getFrameURL(options?: { visitor?: {...} })` → `string` - Get the iframe URL with optional authenticated access
+* `client.getFrameURL(options?: { visitor?: {...}, colorScheme?: 'light' | 'dark' })` → `string` - Get the iframe URL with optional frame options
 * `client.createFrame(iframe: HTMLIFrameElement)` → `GitBookFrameClient` - Create a frame client to communicate with the iframe
 
 ### Frame Client Methods
@@ -163,15 +163,17 @@ const unsubscribe = frame.on('navigate', (data) => {
 
 ## Configuration Options
 
-Configuration options are available via `frame.configure({...})`:
+Most customization options are available via `frame.configure({...})`.
 
-### `tabs`
+#### `tabs`
 
-Override which tabs are displayed. Defaults to your site's configuration.
+Override which tabs are displayed.
 
-* **Type**: `('assistant' | 'docs')[]`
+Search is enabled by default. If you set `tabs`, the embed shows only the tabs you list.
 
-### `actions`
+* **Type**: `('assistant' | 'search' | 'docs')[]`
+
+#### `actions`
 
 Custom action buttons rendered in the sidebar alongside tabs. Each action button triggers a callback when clicked.
 
@@ -179,30 +181,42 @@ Custom action buttons rendered in the sidebar alongside tabs. Each action button
 
 * **Type**: `Array<{ icon: string, label: string, onClick: () => void }>`
 
-### `greeting`
+#### `greeting`
 
 Welcome message displayed in the Assistant tab.
 
 * **Type**: `{ title: string, subtitle: string }`
 
-### `suggestions`
+#### `suggestions`
 
 Suggested questions displayed in the Assistant welcome screen.
 
 * **Type**: `string[]`
 
-### `trademark`
+#### `trademark`
 
 Show or hide the GitBook trademark in the embed UI — including the Docs Embed footer and Assistant branding.
 
 * **Type**: `boolean`
 * **Default**: `true`
 
-### `tools`
+#### `tools`
 
 Custom AI tools to extend the Assistant. See [Creating custom tools](../configuration/creating-custom-tools.md) for details.
 
-* **Type**: `Array<{ name: string, description: string, inputSchema: object, execute: Function, confirmation?: {...} }>`
+* **Type**: `Array<{ name: string, description: string, inputSchema: object, execute: Function, confirmation?: {...} }>`&#x20;
+
+### Frame URL options
+
+Some options are passed to `getFrameURL({...})`.
+
+#### `colorScheme`
+
+Override the embed color scheme.
+
+When omitted, the embed follows the iframe's CSS `color-scheme`, which lets it inherit the parent page or browser preference.
+
+* **Type**: `'light' | 'dark'`
 
 ### `visitor` (Authenticated Access)
 

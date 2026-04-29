@@ -52,7 +52,7 @@ Users can access GitBook Assistant in three ways:
 
 ## Embed GitBook Assistant in your product
 
-You can embed GitBook Assistant directly into your product or website, giving users instant access to AI-powered help without leaving your application. The Assistant can be embedded as part of [Docs Embed](../docs-site/embedding/), which includes both the Assistant tab for AI-powered chat and a Docs tab for browsing your documentation.
+You can embed GitBook Assistant directly into your product or website, giving users instant access to AI-powered help without leaving your application. The Assistant can be embedded as part of [Docs Embed](../docs-site/embedding/), which includes the Assistant tab for AI-powered chat, the Search tab for scoped discovery, and the Docs tab for browsing your documentation.
 
 Choose the embedding method that fits your stack:
 

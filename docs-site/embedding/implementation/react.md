@@ -83,7 +83,8 @@ Pass configuration props to the frame component:
 <GitBookProvider siteURL="https://docs.company.com">
   <GitBookFrame
     trademark={false}
-    tabs={['assistant', 'docs']}
+    tabs={['assistant', 'search', 'docs']}
+    colorScheme="dark"
     greeting={{ title: 'Welcome!', subtitle: 'How can I help?' }}
     suggestions={['What is GitBook?', 'How do I get started?']}
     actions={[
@@ -101,6 +102,8 @@ Pass configuration props to the frame component:
   />
 </GitBookProvider>
 ```
+
+If you omit `colorScheme`, the embed follows the iframe's CSS `color-scheme`. That lets it match your app theme automatically.
 {% endstep %}
 
 {% step %}
@@ -182,17 +185,18 @@ const GitBookFrame = dynamic(
 
 All configuration options can be passed as props to `<GitBookFrame>`. See the Configuration section below for available options.
 
-| Prop        | Type     | Required | Default | Description                                     |
-| ----------- | -------- | -------- | ------- | ----------------------------------------------- |
-| `className` | `string` | No       | `null`  | CSS class name to apply to the frame container. |
-| `style`     | `object` | No       | `{}`    | Inline styles to apply to the frame container.  |
-| `visitor`   | `object` | No       | `{}`    | Authenticated access options (see below).       |
+| Prop          | Type                | Required | Default                          | Description                                     |
+| ------------- | ------------------- | -------- | -------------------------------- | ----------------------------------------------- |
+| `className`   | `string`            | No       | `null`                           | CSS class name to apply to the frame container. |
+| `style`       | `object`            | No       | `{}`                             | Inline styles to apply to the frame container.  |
+| `colorScheme` | `'light' \| 'dark'` | No       | Inherits from CSS `color-scheme` | Override the embed color scheme.                |
+| `visitor`     | `object`            | No       | `{}`                             | Authenticated access options (see below).       |
 
 **useGitBook Hook:**
 
 Returns a `GitBookClient` instance with the following methods:
 
-* `getFrameURL(options?: { visitor?: {...} })` → `string` - Get the iframe URL
+* `getFrameURL(options?: { visitor?: {...}, colorScheme?: 'light' | 'dark' })` → `string` - Get the iframe URL
 * `createFrame(iframe: HTMLIFrameElement)` → `GitBookFrameClient` - Create a frame client
 
 The frame client provides:
@@ -210,9 +214,19 @@ Configuration options are available as props on `<GitBookFrame>`:
 
 ### `tabs`
 
-Override which tabs are displayed. Defaults to your site's configuration.
+Override which tabs are displayed.
 
-* **Type**: `('assistant' | 'docs')[]`
+Search is enabled by default. If you set `tabs`, the embed shows only the tabs you list.
+
+* **Type**: `('assistant' | 'search' | 'docs')[]`
+
+### `colorScheme`
+
+Override the embed color scheme.
+
+When omitted, the embed follows the iframe's CSS `color-scheme`, which lets it inherit the parent page or browser preference.
+
+* **Type**: `'light' | 'dark'`
 
 ### `actions`
 

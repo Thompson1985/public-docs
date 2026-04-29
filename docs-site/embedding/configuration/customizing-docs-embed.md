@@ -6,7 +6,7 @@ description: >-
 
 # Customizing the Embed
 
-After [adding Docs Embed to your website or app](../implementation/), you can further customize the experience by adding things like actionable buttons to the sidebar, suggestions to nudge your users with contextual questions, and more.
+After [adding Docs Embed to your website or app](../implementation/), you can further customize the experience by adding actionable buttons to the sidebar, suggestions to nudge your users with contextual questions, tabs, and more.
 
 ### Customizing the button ([standalone](../implementation/script.md) only)
 
@@ -31,6 +31,38 @@ window.GitBook("configure", {
 * `sparkle` - <i class="fa-sparkle">:sparkle:</i> Sparkle icon
 * `help` - <i class="fa-circle-question">:circle-question:</i> Help/question icon
 * `book` - <i class="fa-book-open">:book-open:</i> Book icon
+
+### Setting the color scheme
+
+By default, the embed follows the iframe's CSS `color-scheme`. This lets it match your app theme or the browser preference automatically.
+
+If you want to force a mode, pass `colorScheme` when you initialize the embed, build the frame URL, or render the React component. This is not part of `configure`.
+
+{% tabs %}
+{% tab title="Standalone script" %}
+```javascript
+window.GitBook(
+  "init",
+  { siteURL: "https://docs.company.com" },
+  { colorScheme: "dark" }
+);
+```
+{% endtab %}
+
+{% tab title="Node.js/NPM" %}
+```javascript
+const iframeURL = gitbook.getFrameURL({
+  colorScheme: "dark",
+});
+```
+{% endtab %}
+
+{% tab title="React" %}
+```jsx
+<GitBookFrame colorScheme="dark" />
+```
+{% endtab %}
+{% endtabs %}
 
 ### Adding actions
 
@@ -96,12 +128,12 @@ window.GitBook("configure", {
 
 ### Configuring tabs
 
-Override which tabs are displayed. By default, the embed shows tabs based on your site's configuration.
+Override which tabs are displayed. All tabs are enabled by default provided your site supports them. For example, if your site does not have the Assistant enabled, it will not be shown. If you set `tabs`, the embed shows only the tabs you list.
 
 ```javascript
 window.GitBook("configure", {
-  tabs: ["assistant", "docs"], // Show both tabs
-  // tabs: ['assistant'], // Show only assistant tab
+  tabs: ["assistant", "search", "docs"], // Show all tabs
+  // tabs: ["search", "docs"], // Show search and docs only
   // tabs: ['docs'], // Show only docs tab
 });
 ```

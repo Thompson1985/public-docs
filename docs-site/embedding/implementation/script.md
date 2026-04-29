@@ -6,7 +6,7 @@ description: >-
 
 # Script tag
 
-The simplest integration method for embedding GitBook Assistant into your website or app is a standalone script that you include in your HTML. Each GitBook docs site provides a ready to use embed script that loads the widget automatically and connects it to your docs. This page tells you how to do that.
+The simplest way to add Docs Embed to your website or app is with a standalone script that you include in your HTML. Each GitBook docs site provides a ready-to-use embed script that loads the widget automatically and connects it to your docs. This page tells you how to do that.
 
 No SDK, build step, or framework integration is required. Just include the script and the widget appears on your page.
 
@@ -72,7 +72,7 @@ You can customize the widget before displaying it. Call `configure` after loadin
       icon: 'assistant' // assistant | sparkle | help | book
     },
     trademark: false,
-    tabs: ['assistant', 'docs'],
+    tabs: ['assistant', 'search', 'docs'],
     actions: [
       {
         icon: 'circle-question',
@@ -101,6 +101,29 @@ Using this method, you can customize the:
 * Custom action buttons
 * Greeting title and subtitle
 * Suggested prompts shown to users.
+
+Search is enabled by default. If you set `tabs`, list every tab you want to keep.
+
+### Set the color scheme
+
+By default, the embed follows the iframe's CSS `color-scheme`. This lets it inherit your app theme or the browser preference automatically.
+
+If you want to force a mode, initialize the embed and pass `colorScheme` in `frameOptions`:
+
+```html
+<script src="https://YOUR_DOCS_DOMAIN/~gitbook/embed/script.js"></script>
+<script>
+  window.GitBook(
+    'init',
+    { siteURL: 'https://YOUR_DOCS_DOMAIN' },
+    { colorScheme: 'dark' }
+  );
+
+  window.GitBook('show');
+</script>
+```
+
+Use this pattern when you need frame-level options such as `colorScheme` or `visitor`.
 
 ### Control widget visibility
 
@@ -181,7 +204,7 @@ Use this pattern when the widget should load only after user action or feature f
 
 ### Initialization
 
-* `GitBook('init', options: { siteURL: string }, frameOptions?: { visitor?: {...} })` - Initialize widget with site URL and optional authenticated access
+* `GitBook('init', options: { siteURL: string }, frameOptions?: { visitor?: {...}, colorScheme?: 'light' | 'dark' })` - Initialize widget with site URL and optional frame options
 
 ### Widget Control
 
@@ -208,19 +231,23 @@ Use this pattern when the widget should load only after user action or feature f
 
 ## Configuration Options
 
-Configuration options are available via `GitBook('configure', {...})`:
+### `GitBook('configure')`
 
-### `tabs`
+Most configuration options are available via `GitBook('configure', {...})`:
 
-Override which tabs are displayed. Defaults to your site's configuration.
+#### `tabs`
 
-* **Type**: `('assistant' | 'docs')[]`
+Override which tabs are displayed.
+
+Search is enabled by default. If you set `tabs`, the embed shows only the tabs you list.
+
+* **Type**: `('assistant' | 'search' | 'docs')[]`
 * **Options**:
-  * `['assistant', 'docs']` - Show both tabs
-  * `['assistant']` - Show only the assistant tab
+  * `['assistant', 'search', 'docs']` - Show all tabs
+  * `['search', 'docs']` - Show search and docs only
   * `['docs']` - Show only the docs tab
 
-### `actions`
+#### `actions`
 
 Custom action buttons rendered in the sidebar alongside tabs. Each action button triggers a callback when clicked.
 
@@ -232,19 +259,19 @@ Custom action buttons rendered in the sidebar alongside tabs. Each action button
   * `label`: `string` - Button label text
   * `onClick`: `() => void | Promise<void>` - Callback function when clicked
 
-### `greeting`
+#### `greeting`
 
 Welcome message displayed in the Assistant tab.
 
 * **Type**: `{ title: string, subtitle: string }`
 
-### `suggestions`
+#### `suggestions`
 
 Suggested questions displayed in the Assistant welcome screen.
 
 * **Type**: `string[]`
 
-### `trademark`
+#### `trademark`
 
 Show or hide the GitBook trademark in the embed UI — including the Docs Embed footer and Assistant branding.
 
@@ -258,13 +285,13 @@ window.GitBook('configure', {
 });
 ```
 
-### `tools`
+#### `tools`
 
 Custom AI tools to extend the Assistant. See [Creating custom tools](../configuration/creating-custom-tools.md) for details.
 
 * **Type**: `Array<{ name: string, description: string, inputSchema: object, execute: Function, confirmation?: {...} }>`
 
-### `button`
+#### `button`
 
 Configure the widget button that launches the embed (standalone script only). This allows you to customize the label and icon of the button that appears in the bottom-right corner of your page.
 
@@ -292,7 +319,30 @@ window.GitBook('configure', {
 **Note:** This option is only available when using the standalone script tag implementation. For React or Node.js implementations, you'll need to create your own button to trigger the embed.
 {% endhint %}
 
-### `visitor` (Authenticated Access)
+### `frameOptions`
+
+Some options are set on the frame instead of as configuration. Pass them in `frameOptions` when calling `GitBook('init', options, frameOptions)`.
+
+#### `colorScheme`
+
+Override the embed color scheme.
+
+When omitted, the embed follows the iframe's CSS `color-scheme`, which lets it inherit the parent page or browser preference.
+
+
+
+* **Type**: `'light' | 'dark'`
+* **Example**:
+
+```javascript
+window.GitBook(
+  'init',
+  { siteURL: 'https://docs.company.com' },
+  { colorScheme: 'dark' }
+);
+```
+
+#### `visitor` (Authenticated Access)
 
 Pass when initializing with `GitBook('init', options, frameOptions)`. Used for [Adaptive Content](../../../site-access/adaptive-content/) and [Authenticated Access](../../../site-access/authenticated-access/).
 
