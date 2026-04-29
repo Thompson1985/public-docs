@@ -45,6 +45,8 @@ Each connection creates a stream of records from that source, such as issues, di
 After you save the connection, GitBook starts syncing records from that source.
 
 In the connections list, you can review the sync status, record count, and last sync time.
+
+Connected URLs refresh once a day by default. You can also trigger a refresh manually from your site’s **Settings** → **Connections**.
 {% endstep %}
 
 {% step %}
