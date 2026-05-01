@@ -22,7 +22,7 @@ You can run multiple configurations per channel — for example, Support Agent m
 
 To add a channel, open your site’s **Settings** and click on **Channels**.
 
-<figure><img src="../.gitbook/assets/Screenshot 2026-04-29 at 1.44.24 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/26_05_01_channels@2x.png" alt=""><figcaption></figcaption></figure>
 
 ### Available channels
 
