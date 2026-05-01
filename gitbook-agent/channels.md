@@ -10,26 +10,26 @@ tags:
 
 # Channels
 
-{% hint style="warning" %}
-#### Channels are currently in early access
+Channels bring [GitBook Assistant](../ai-and-search/gitbook-ai-assistant.md) and [GitBook Agent](what-is-gitbook-agent.md)  into the tools your team already uses. Once connected, your team can mention `@GitBook` in Slack, GitHub, or Linear to ask questions, open change requests, and keep your docs up to date — without leaving their existing workflow.
 
-We’re slowly rolling out access to channels. Stay tuned for more progress on the features below.
-{% endhint %}
+When you add a channel, you choose how GitBook shows up in that tool. Each configuration runs in one of two modes:
 
-Channels allow you to bring the power of [GitBook Assistant](../ai-and-search/gitbook-ai-assistant.md) and [GitBook Agent](what-is-gitbook-agent.md) into other tools and workflows.
+**Support agent:** GitBook Assistant answers questions from your team or visitors directly in the channel. Ask a question, get an answer pulled from your docs.
 
-When GitBook Agent works from Slack, GitHub, or Linear, it automatically links the change request to the originating thread, issue, or pull request.
+**Collaborator:** GitBook Agent joins as a teammate. Mention `@GitBook` to open change requests, request edits, or keep your docs in sync with what's happening in that tool. When Agent creates a change request from a channel, it automatically links it to the originating thread, issue, or pull request.
+
+You can run multiple configurations per channel — for example, Support Agent mode for one customer-facing Slack channel, and Collaborator mode in another channel for your docs team.
 
 To add a channel, open your site’s **Settings** and click on **Channels**.
 
-{% hint style="info" %}
-#### Looking to embed GitBook Assistant in your website or product?
+<figure><img src="../.gitbook/assets/Screenshot 2026-04-29 at 1.44.24 PM.png" alt=""><figcaption></figcaption></figure>
 
-Head to [embedding](../docs-site/embedding/ "mention") to learn how to embed GitBook Assistant.
-{% endhint %}
+### Available channels
+
+<table data-view="cards"><thead><tr><th></th><th><select><option value="mjZVekTsgGQo" label="In progress" color="blue"></option><option value="exlMMXLVjkth" label="Planned" color="blue"></option><option value="WK4vEyJjJM8h" label="Available" color="blue"></option></select></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Slack</strong></td><td><span data-option="WK4vEyJjJM8h">Available</span></td><td></td><td></td></tr><tr><td><strong>Linear</strong></td><td><span data-option="WK4vEyJjJM8h">Available</span></td><td></td><td></td></tr><tr><td><strong>GitHub</strong></td><td><span data-option="WK4vEyJjJM8h">Available</span></td><td></td><td></td></tr></tbody></table>
 
 ### Coming soon
 
 We’re working on adding more channels. View the progress of each integration below.
 
-<table data-view="cards"><thead><tr><th></th><th><select><option value="mjZVekTsgGQo" label="In progress" color="blue"></option><option value="exlMMXLVjkth" label="Planned" color="blue"></option></select></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Slack</strong></td><td><span data-option="mjZVekTsgGQo">In progress</span></td><td></td><td></td></tr><tr><td><strong>Linear</strong></td><td><span data-option="mjZVekTsgGQo">In progress</span></td><td></td><td></td></tr><tr><td><strong>GitHub</strong></td><td><span data-option="mjZVekTsgGQo">In progress</span></td><td></td><td></td></tr><tr><td><strong>Discord</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Intercom</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Microsoft Teams</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Google Chat</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Request a channel</strong></td><td></td><td><i class="fa-arrow-up-right-from-square">:arrow-up-right-from-square:</i></td><td><a href="https://github.com/orgs/GitbookIO/discussions/new?category=feature-requests">https://github.com/orgs/GitbookIO/discussions/new?category=feature-requests</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th><select><option value="mjZVekTsgGQo" label="In progress" color="blue"></option><option value="exlMMXLVjkth" label="Planned" color="blue"></option><option value="WK4vEyJjJM8h" label="Available" color="blue"></option></select></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Discord</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Intercom</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Microsoft Teams</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Google Chat</strong></td><td><span data-option="exlMMXLVjkth">Planned</span></td><td></td><td></td></tr><tr><td><strong>Request a channel</strong></td><td></td><td><i class="fa-arrow-up-right-from-square">:arrow-up-right-from-square:</i></td><td><a href="https://github.com/orgs/GitbookIO/discussions/new?category=feature-requests">https://github.com/orgs/GitbookIO/discussions/new?category=feature-requests</a></td></tr></tbody></table>
